@@ -21,15 +21,26 @@ let length = 1
 displayEl.textContent = length
 
 function add(){
-    length++
     displayEl.textContent = length
+    if (length > 9){
+        length = 10
+    }else {
+        length++
+    }
 }
 function decrease(){
-    length--
     displayEl.textContent = length 
+    if (length < 1){
+        length = 0
+    }else{
+        length--
+    }
 }
 
-
+if (length < 1){
+    length = 0
+}
+passwordEl.textContent = ":Password Here:"
 
 function generate() {
 
