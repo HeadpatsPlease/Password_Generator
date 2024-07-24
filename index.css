@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px ;
+}
+.addbuttons{
+    display: flex;
+    align-items: center;
+}
+.addbuttons button{
+    margin: 10px;
+}
