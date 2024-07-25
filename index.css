@@ -12,6 +12,12 @@
     width: 500px;
     border-radius: 10px;
 }
+.container h1{
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
 .display{
     display: flex;
     flex-direction: column;
@@ -58,4 +64,13 @@
     background-color: rgb(102, 102, 102);
     color: rgb(224, 223, 223);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes clickani {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(5px);
+    }
 }

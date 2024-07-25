@@ -1,5 +1,6 @@
 let displayEl = document.getElementById("display-el")
 let passwordEl = document.getElementById("password-el")
+let generateEl = document.getElementById("generate-el")
 
 let smallLetters = [
                     'a', 'b', 'c', 'd', 'e', 'f', 
