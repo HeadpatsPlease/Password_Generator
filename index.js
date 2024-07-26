@@ -19,10 +19,10 @@ let specialCharacters = [
                 ]
 
 let length = 1
-displayEl.textContent = length
+displayEl.textContent = length +" Characters"
 
 function add(){
-    displayEl.textContent = length
+    displayEl.textContent = length + " Characters"
     if (length > 9){
         length = 10
     }else {
@@ -30,7 +30,7 @@ function add(){
     }
 }
 function decrease(){
-    displayEl.textContent = length 
+    displayEl.textContent = length + " Characters"
     if (length < 1){
         length = 0
     }else{
@@ -43,28 +43,31 @@ if (length < 1){
 }
 passwordEl.textContent = ":Password Here:"
 
+
+let pass = []
+
 function generate() {
 
     passwordEl.textContent = ''
     for (let i = 0; i < length; i++){
         let random = Math.floor(Math.random() * 26)
-        passwordEl.textContent += smallLetters[random]
+        pass.push(smallLetters[random])
     }
     for (let i = 0; i < length; i++){
         let random = Math.floor(Math.random() * 26)
-        passwordEl.textContent += capitalLetters[random]
+        pass.push(capitalLetters[random])
     }
     for (let i = 0; i < length; i++){
         let random = Math.floor(Math.random() * 23)
-        passwordEl.textContent += specialCharacters[random]
+        pass.push(specialCharacters[random])
     }
+    create()
+}
+
+function create(){
     for (let i = 0; i < length; i++){
-        let random = Math.floor(Math.random() * 26)
-        passwordEl.textContent += capitalLetters[random]
-    }
-    for (let i = 0; i < length; i++){
-        let random = Math.floor(Math.random() * 26)
-        passwordEl.textContent += smallLetters[random]
+        let random = Math.floor(Math.random() * pass.length)
+        passwordEl.textContent += pass[random]
     }
 }
 
